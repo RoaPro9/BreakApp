@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "hello roa")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [.accentColor, Color("Color1"), Color("Color2")]), startPoint: .top, endPoint: .bottom)
+//            Color.accentColor
+//            LinearGradient(colors: [Color("Color1"),Color("Color2")], startPoint: .top, endPoint: .bottom)
+            VStack {
+                
+                Text("test, world!")
+            }
+            .padding()
+        }}
 }
 
 struct ContentView_Previews: PreviewProvider {
