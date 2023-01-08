@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		38B998D8296AF2020043E786 /* NanoChBreakAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998D7296AF2020043E786 /* NanoChBreakAppApp.swift */; };
-		38B998DA296AF2020043E786 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998D9296AF2020043E786 /* ContentView.swift */; };
 		38B998DC296AF2030043E786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B998DB296AF2030043E786 /* Assets.xcassets */; };
 		38B998DF296AF2030043E786 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B998DE296AF2030043E786 /* Preview Assets.xcassets */; };
-		38B998EA296B0FE00043E786 /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B998EC296B0FE00043E786 /* LaunchScreenView.storyboard */; };
+		38B998EE296B3D480043E786 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998ED296B3D480043E786 /* LaunchScreen.swift */; };
+		38B998EF296B49840043E786 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998D9296AF2020043E786 /* ContentView.swift */; };
+		38B998F3296B4C100043E786 /* MemojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998F2296B4C100043E786 /* MemojiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,8 @@
 		38B998DB296AF2030043E786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B998DE296AF2030043E786 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38B998E5296B04810043E786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		38B998EB296B0FE00043E786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreenView.storyboard; sourceTree = "<group>"; };
+		38B998ED296B3D480043E786 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		38B998F2296B4C100043E786 /* MemojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 				38B998E5296B04810043E786 /* Info.plist */,
 				38B998D7296AF2020043E786 /* NanoChBreakAppApp.swift */,
 				38B998D9296AF2020043E786 /* ContentView.swift */,
-				38B998EC296B0FE00043E786 /* LaunchScreenView.storyboard */,
+				38B998F2296B4C100043E786 /* MemojiView.swift */,
+				38B998ED296B3D480043E786 /* LaunchScreen.swift */,
 				38B998DB296AF2030043E786 /* Assets.xcassets */,
 				38B998DD296AF2030043E786 /* Preview Content */,
 			);
@@ -132,7 +135,6 @@
 			files = (
 				38B998DF296AF2030043E786 /* Preview Assets.xcassets in Resources */,
 				38B998DC296AF2030043E786 /* Assets.xcassets in Resources */,
-				38B998EA296B0FE00043E786 /* LaunchScreenView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,23 +145,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B998DA296AF2020043E786 /* ContentView.swift in Sources */,
 				38B998D8296AF2020043E786 /* NanoChBreakAppApp.swift in Sources */,
+				38B998EE296B3D480043E786 /* LaunchScreen.swift in Sources */,
+				38B998EF296B49840043E786 /* ContentView.swift in Sources */,
+				38B998F3296B4C100043E786 /* MemojiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		38B998EC296B0FE00043E786 /* LaunchScreenView.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38B998EB296B0FE00043E786 /* Base */,
-			);
-			name = LaunchScreenView.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		38B998E0296AF2030043E786 /* Debug */ = {
