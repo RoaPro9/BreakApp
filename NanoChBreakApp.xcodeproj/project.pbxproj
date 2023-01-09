@@ -12,7 +12,12 @@
 		38B998DF296AF2030043E786 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B998DE296AF2030043E786 /* Preview Assets.xcassets */; };
 		38B998EE296B3D480043E786 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998ED296B3D480043E786 /* LaunchScreen.swift */; };
 		38B998EF296B49840043E786 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998D9296AF2020043E786 /* ContentView.swift */; };
-		38B998F3296B4C100043E786 /* MemojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998F2296B4C100043E786 /* MemojiView.swift */; };
+		38B998F5296B51990043E786 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998F4296B51990043E786 /* LottieView.swift */; };
+		38B998F8296B53D30043E786 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 38B998F7296B53D30043E786 /* Lottie */; };
+		38B998FB296C31160043E786 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38B998FD296C31160043E786 /* Localizable.strings */; };
+		38B99900296C50720043E786 /* SoundsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998FF296C50720043E786 /* SoundsSheet.swift */; };
+		38B99902296C52750043E786 /* alarmSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B99901296C52750043E786 /* alarmSheet.swift */; };
+		38B99904296C939A0043E786 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B99903296C939A0043E786 /* ToolBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +28,12 @@
 		38B998DE296AF2030043E786 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38B998E5296B04810043E786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		38B998ED296B3D480043E786 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
-		38B998F2296B4C100043E786 /* MemojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiView.swift; sourceTree = "<group>"; };
+		38B998F4296B51990043E786 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		38B998FC296C31160043E786 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38B998FE296C311A0043E786 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38B998FF296C50720043E786 /* SoundsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsSheet.swift; sourceTree = "<group>"; };
+		38B99901296C52750043E786 /* alarmSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmSheet.swift; sourceTree = "<group>"; };
+		38B99903296C939A0043E786 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B998F8296B53D30043E786 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,7 @@
 		38B998CB296AF2020043E786 = {
 			isa = PBXGroup;
 			children = (
+				38B998FD296C31160043E786 /* Localizable.strings */,
 				38B998D6296AF2020043E786 /* NanoChBreakApp */,
 				38B998D5296AF2020043E786 /* Products */,
 			);
@@ -59,7 +71,10 @@
 				38B998E5296B04810043E786 /* Info.plist */,
 				38B998D7296AF2020043E786 /* NanoChBreakAppApp.swift */,
 				38B998D9296AF2020043E786 /* ContentView.swift */,
-				38B998F2296B4C100043E786 /* MemojiView.swift */,
+				38B99903296C939A0043E786 /* ToolBarView.swift */,
+				38B998FF296C50720043E786 /* SoundsSheet.swift */,
+				38B99901296C52750043E786 /* alarmSheet.swift */,
+				38B998F4296B51990043E786 /* LottieView.swift */,
 				38B998ED296B3D480043E786 /* LaunchScreen.swift */,
 				38B998DB296AF2030043E786 /* Assets.xcassets */,
 				38B998DD296AF2030043E786 /* Preview Content */,
@@ -91,6 +106,9 @@
 			dependencies = (
 			);
 			name = NanoChBreakApp;
+			packageProductDependencies = (
+				38B998F7296B53D30043E786 /* Lottie */,
+			);
 			productName = NanoChBreakApp;
 			productReference = 38B998D4296AF2020043E786 /* NanoChBreakApp.app */;
 			productType = "com.apple.product-type.application";
@@ -117,8 +135,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 38B998CB296AF2020043E786;
+			packageReferences = (
+				38B998F6296B53D30043E786 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 38B998D5296AF2020043E786 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B998DF296AF2030043E786 /* Preview Assets.xcassets in Resources */,
+				38B998FB296C31160043E786 /* Localizable.strings in Resources */,
 				38B998DC296AF2030043E786 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,12 +170,27 @@
 			files = (
 				38B998D8296AF2020043E786 /* NanoChBreakAppApp.swift in Sources */,
 				38B998EE296B3D480043E786 /* LaunchScreen.swift in Sources */,
+				38B99904296C939A0043E786 /* ToolBarView.swift in Sources */,
 				38B998EF296B49840043E786 /* ContentView.swift in Sources */,
-				38B998F3296B4C100043E786 /* MemojiView.swift in Sources */,
+				38B99902296C52750043E786 /* alarmSheet.swift in Sources */,
+				38B99900296C50720043E786 /* SoundsSheet.swift in Sources */,
+				38B998F5296B51990043E786 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38B998FD296C31160043E786 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38B998FC296C31160043E786 /* en */,
+				38B998FE296C311A0043E786 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		38B998E0296AF2030043E786 /* Debug */ = {
@@ -351,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38B998F6296B53D30043E786 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38B998F7296B53D30043E786 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38B998F6296B53D30043E786 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38B998CC296AF2020043E786 /* Project object */;
 }
