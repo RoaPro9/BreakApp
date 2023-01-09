@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct ContentView: View {
+    @StateObject private var vm = TimerView.ViewModel()
     @State private var yPos: CGFloat = 0
     @State private var isAnimating: Bool = false
     //    @State private var showingAlarmSheet = false
@@ -58,7 +59,9 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .offset(y: yPos)
-                            .animation(Animation.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5))
+                            .animation(.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5) )
+                            
+//                            .animation(Animation.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5) , value:  vm.isActive)
                             .onAppear {
                                 
                                 self.yPos = -30
@@ -67,6 +70,7 @@ struct ContentView: View {
                         
                         //
                     }
+                    TimerView()
                     
                     
                     

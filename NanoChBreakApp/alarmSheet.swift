@@ -19,6 +19,9 @@ struct alarmSheet: View {
         } label: {
             Image(systemName: "clock.badge.questionmark")
                 .foregroundColor(Color.white)
+            
+//            .background(.thinMaterial)
+//            .overlay(RoundedRectangle(cornerRadius: 20))
                
         }
         .buttonStyle(.bordered)
