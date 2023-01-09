@@ -13,10 +13,28 @@ struct NotificationListView: View {
         List (notificationManeger.notifications, id: \.identifier){
              notification in
             Text (notification.content.title)
+                .fontWeight(.semibold)
             
             
             
-        }.listStyle(InsetListStyle())
+        }
+        .listStyle(InsetListStyle())
+        .navigationTitle("Notification")
+            .onAppear(perform: notificationManeger.reloadAuthorizationStatus)
+            .onChange(of: notificationManeger.authorizationStatus){
+                authorizationStatus in
+                switch authorizationStatus{
+                case .notDetermined : // request
+                    notificationManeger.requestAuthorization()
+                case .authorized :
+                    notificationManeger.reloadLocalNotification()
+                default: break;
+                    
+                    
+                    
+                }
+                
+            }
     }
 }
 

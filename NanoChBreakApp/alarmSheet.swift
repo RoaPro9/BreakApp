@@ -61,7 +61,7 @@ struct alarmSheet: View {
                         }
                         
                         ToolbarItem(placement: .cancellationAction) {
-                            Button("Cancel", action: {})
+                            Button("Cancel", role : .cancel , action: {})
                         }
                     }
                     .cornerRadius(25)

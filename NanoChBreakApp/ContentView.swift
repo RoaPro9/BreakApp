@@ -18,7 +18,7 @@ struct ContentView: View {
  
             
             ZStack{
-               
+                NotificationListView()
                 
                 
                 ToolBarView()
