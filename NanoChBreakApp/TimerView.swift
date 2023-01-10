@@ -6,27 +6,30 @@
 //
 
 import SwiftUI
-
+import AVKit
 struct TimerView: View {
+    @EnvironmentObject var viewModel : SoundViewModel
     @StateObject private var vm = ViewModel()
+    @State private var vmS =  SoundsPlayer()
+//    @State private var soundUrl =  SoundsSheet()
+    @State var audioPlayer: AVAudioPlayer!
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let width : Double = 250
+   // let sound = Bundle.main.path(forResource: "\(self.viewModel.sound.url)", ofType: "mp3")
+
+   // self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
     
     var body: some View {
+        
         VStack{
             
-                
+          //  AVAudioPlayer(contentsOf: URL(fileURLWithPath: viewModel.sound))
                     
                 Text ("\(vm.time)")
                 .foregroundColor(.white)
                 
                     .frame(width: width)
-//                    .background(.thinMaterial)
-//                    .clipShape(
-//                        Circle( ) .frame(width :width))
-//                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-//                    .overlay(Circle()
-//                        .stroke(Color.gray,lineWidth: 4))
+
                     .font(.system(size: 60 , weight: .medium, design: .rounded))
                     .alert("You Did It Well Done!", isPresented: $vm.showingAlert ) {
                         Button("Great", role: .cancel ){}
@@ -40,17 +43,39 @@ struct TimerView: View {
             HStack(spacing: 50){
                 Button("Start"){
                     vm.start(minutes: vm.minutes)
+                    viewModel.playSound()
+                   // self.audioPlayer.play()
+//                    self.vmS.player.play()
+//                    self.vmS.playing = true
                     
                 }.tint(.white)
-                .disabled(vm.isActive)
-                Button("Reset" , action : vm.reset)
-                    .tint(Color("Color 9"))
+                Button("Reset"){
+                    vm.reset()
+                    
+                    self.viewModel.audioPlayer?.stop()
+//
+                    
+                }.tint(Color("Color 9"))
+               
+               
+//                Button("Reset" , action : vm.reset)
+//                    .tint(Color("Color 9"))
                     //.frame(width: width)
                     
             }
             
-        }.onReceive(timer){
+        }.onAppear{
+          
+//            let sound = Bundle.main.path(forResource: "\(self.viewModel.sound.url)", ofType: "mp3")
+//
+//            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+////
+////
+        }
+        
+        .onReceive(timer){
             _ in vm.updateCountDown()
+           
         }
     }
 }

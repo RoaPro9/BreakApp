@@ -12,7 +12,8 @@
 import Foundation
 extension TimerView {
     final class ViewModel : ObservableObject {
-        
+    
+       // @Published private var tm =  TimerView()
         @Published var isActive = false
         @Published var showingAlert = false
         @Published var time : String = "5:00"
@@ -42,7 +43,7 @@ extension TimerView {
             self.isActive = false
             self.time = "\(Int(minutes)):00"
             
-            
+           
             
         }
         

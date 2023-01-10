@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct NanoChBreakAppApp: App {
+    @StateObject var vm = SoundViewModel()
     var body: some Scene {
         WindowGroup {
             LaunchScreen()
+                .environmentObject(vm)
         }
     }
 }

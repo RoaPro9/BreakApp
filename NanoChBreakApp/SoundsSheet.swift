@@ -9,70 +9,96 @@ import SwiftUI
 
 
 struct SoundsSheet: View {
+    @EnvironmentObject var viewModel : SoundViewModel
     @State private var showingSoundsSheet = false
-    
+    @State  var SUrl : String = "sound5"
+    //@State var sounds : [Sounds] = []
+    var sounds = [
+        Sounds(title: "Sound1", url: "sound1", time: "1:00"),
+        Sounds(title: "Sound2", url: "sound2", time: "3:00"),
+        Sounds(title: "Sound3", url: "sound3", time: "12:00"),
+        Sounds(title: "Sound4", url: "sound4", time: "1:00"),
+        Sounds(title: "Sound5", url: "sound5", time: "5:00")
+        
+    ]
     var body: some View {
-     
-            Button {
-                showingSoundsSheet.toggle()
-                
-            } label: {
-                Image(systemName: "music.note")
-                    .foregroundColor(Color.white)
-                
-                
-                
-                
-            } .buttonStyle(.bordered)
+        
+        Button {
+            showingSoundsSheet.toggle()
+            
+        } label: {
+            Image(systemName: "music.note")
+                .foregroundColor(Color.white)
+            
+            
+            
+            
+        } .buttonStyle(.bordered)
             .sheet(isPresented: $showingSoundsSheet) {
                 NavigationView{
                     VStack {
-//                        HStack(spacing : 100){
-//                            Text("")
-//                            Text("Sounds")
-//                                .font(.headline).foregroundColor(Color("Color"))
-//
-//                            Button(role: .none) {
-//                            } label: {
-//                                Text("Done")
-//                            }.foregroundColor(Color("Color 8"))
-//                        }
+                        //                        HStack(spacing : 100){
+                        //                            Text("")
+                        //                            Text("Sounds")
+                        //                                .font(.headline).foregroundColor(Color("Color"))
+                        //
+                        //                            Button(role: .none) {
+                        //                            } label: {
+                        //                                Text("Done")
+                        //                            }.foregroundColor(Color("Color 8"))
+                        //                        }
+                        
+                        
+                        
                         List{
-                            Text("sound 1")
-                            Text("sound 2")
-                            Text("sound 3")
+                            //                             Text("list")
                             
-                            
-                            
-                        }
-                       
-                        .toolbar {
-                            ToolbarItem(placement: .confirmationAction) {
-                                Button("Done", action: {})
+                            ForEach(sounds) { sound in
+                                //                                    Text(sound.title)
+                                Button(sound.title){
+                                    viewModel.sound = sound
+                                    viewModel.playSound()
+//                                    self.SUrl = sound.url
+//                                    print(self.SUrl,"😀")
+                                    
+                                    //
+                                    
+                                }
+                                .tint(Color("Color 9"))
+                                
+                                
+                                
+                            }}
+                            .cornerRadius(25)
+                            .foregroundStyle(Color("Color 1"))
+                            .toolbar {
+                                ToolbarItem(placement: .confirmationAction) {
+                                    Button("Done", action: {})
+                                }
+                                
+                                //                            ToolbarItem(placement: .cancellationAction) {
+                                //                                Button("Cancel", action: {})
+                                //                            }
                             }
                             
-//                            ToolbarItem(placement: .cancellationAction) {
-//                                Button("Cancel", action: {})
-//                            }
-                        }
+                            
+                            
+                        }.padding()
                         
-                        .cornerRadius(25)
-                        .foregroundStyle(Color("Color 1"))
                         
-                    }.padding()
                         
+                    }.presentationDetents([.height(250), .fraction(20), .medium, .large])
                     
-                        
-                }.presentationDetents([.height(250), .fraction(20), .medium, .large])
-                
-                    .edgesIgnoringSafeArea(.all)
-                
+                        .edgesIgnoringSafeArea(.all)
+                    
+                }
             }
+    }
+    
+    struct SoundsSheet_Previews: PreviewProvider {
+        static var previews: some View {
+            SoundsSheet()
         }
     }
+    
 
-struct SoundsSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        SoundsSheet()
-    }
-}
