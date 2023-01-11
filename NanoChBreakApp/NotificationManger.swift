@@ -63,7 +63,7 @@ final class NotificationManger : ObservableObject {
             let notificationContent = UNMutableNotificationContent()
             notificationContent.title = title
             notificationContent.sound = .default
-            notificationContent.body = "some message"
+            notificationContent.body = "Stop what you are doing it's you time 😎⏳"
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
             

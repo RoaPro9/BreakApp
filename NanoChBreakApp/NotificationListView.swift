@@ -24,10 +24,11 @@ struct NotificationListView: View {
         case .authorized:
             if notificationManager.notifications.isEmpty {
                 InfoOverlayView(
-                    infoMessage: "No Notifications Yet",
+                    infoMessage: "No alarm Yet",
                     buttonTitle: "Create",
                     systemImageName: "plus.circle",
                     action: {
+                        
                         isCreatePresented = true
                     }
                 )

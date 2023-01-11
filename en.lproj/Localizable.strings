@@ -6,3 +6,24 @@
   
 */
 "welcome"="welcome";
+"Time"="Time";
+"Reset"= "Reset";
+"Hourly"= "Hourly";
+"Daily" = "Daily";
+"Weekdays" ="Weekdays";
+"Weekends"= "Weekends";
+"Weekly"="Weekly";
+"Never"="Never";
+"Start" = "Start";
+"You Did It Well Done!" = "You Did It Well Done!";
+"Meditaion Time" = "Meditaion Time";
+"Stop what you are doing it's you time 😎⏳" = "Stop what you are doing it's you time 😎⏳";
+"No alarm Yet" = "No alarm Yet";
+"Create" = "Create" ;
+"Please Enable Notification Permission In Settings" = "Please Enable Notification Permission In Settings";
+"Settings" = "Settings" ;
+"Notifications" = "Notifications";
+"Repeat" = "Repeat";
+"Take A Break" = "Take A Break" ;
+"Cancel" = "Cancel";
+"Great" = "Great" ;

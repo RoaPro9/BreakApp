@@ -8,7 +8,7 @@ struct InfoOverlayView: View {
     let buttonTitle: String
     let systemImageName: String
     let action: () -> Void
-    
+    @StateObject private var notificationManager = NotificationManger()
     var body: some View {
         VStack {
             Text(infoMessage)
@@ -16,6 +16,8 @@ struct InfoOverlayView: View {
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
             Button {
+                alarmSheet( notificationManager: notificationManager
+                          )
                 action()
             } label: {
                 Label(buttonTitle, systemImage: systemImageName)

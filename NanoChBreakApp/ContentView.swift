@@ -34,20 +34,20 @@ struct ContentView: View {
 //                        SoundsSheet()
 //
 //                    }
-                    Toggle(isOn: $showingNotivicationSheet) {
-                        
-                        
-                        Label("Meditaion Time", systemImage: "brain")
-                        
-                        
-                    }.padding()
-                        .tint(.purple)
-                        .controlSize(.large)
-                        .toggleStyle(.button)
-                        .sheet(isPresented: $showingNotivicationSheet ){
-                            NotificationListView()
-                            
-                        }
+//                    Toggle(isOn: $showingNotivicationSheet) {
+//                        
+//                        
+//                        Label("Meditaion Time", systemImage: "brain")
+//                        
+//                        
+//                    }.padding()
+//                        .tint(.purple)
+//                        .controlSize(.large)
+//                        .toggleStyle(.button)
+//                        .sheet(isPresented: $showingNotivicationSheet ){
+//                            NotificationListView()
+//                            
+//                        }
                     
                     
                     

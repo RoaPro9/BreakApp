@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ToolBarView: View {
     @State private var isCreatePresented = false
+    @State private var showingNotivicationSheet = false
+
     @StateObject private var notificationManager = NotificationManger()
     var body: some View {
         NavigationView{
@@ -20,13 +22,57 @@ struct ToolBarView: View {
                                                  ), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
                 Text("").toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        alarmSheet( notificationManager: notificationManager
-                                  )
+                    ToolbarItemGroup(  placement: .navigationBarTrailing){
+                        
+                        ZStack{
+                            RoundedRectangle(cornerSize: CGSize(width: 250, height: 150) )
+                                       .foregroundColor(Color.white )
+                                       .opacity(0.35)
+                                
+                            HStack{
+                                alarmSheet( notificationManager: notificationManager)
+                                Toggle(isOn: $showingNotivicationSheet) {
+                                
+                                
+                                                            Label("Meditaion Time", systemImage: "brain")
+                                
+                                
+                                                        }.padding()
+                                                            .tint(.white)
+                                                            .controlSize(.large)
+                                                            .toggleStyle(.button)
+                                                            .sheet(isPresented: $showingNotivicationSheet ){
+                                                                NotificationListView()
+                                
+                                                            }
+                                SoundsSheet()
+                            }
+                            
+                        }
+                        
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        SoundsSheet()
-                    }
+//                    ToolbarItem(placement: .navigationBarLeading) {
+//                        alarmSheet( notificationManager: notificationManager
+//                                  )
+//                    }
+//                    ToolbarItem(placement: .principal){
+//                        Toggle(isOn: $showingNotivicationSheet) {
+//
+//
+//                            Label("Meditaion Time", systemImage: "brain")
+//
+//
+//                        }.padding()
+//                            .tint(.white)
+//                            .controlSize(.large)
+//                            .toggleStyle(.button)
+//                            .sheet(isPresented: $showingNotivicationSheet ){
+//                                NotificationListView()
+//
+//                            }}
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        SoundsSheet()
+//                    }
                     
                 }
                 
