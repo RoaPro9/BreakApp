@@ -19,14 +19,14 @@ struct alarmSheet: View {
         Button {
             showingAlarmSheet.toggle()
         } label: {
-            Image(systemName: "clock.badge.questionmark")
+            Image(systemName: "alarm")
                 .foregroundColor(Color.white)
             
 //            .background(.thinMaterial)
 //            .overlay(RoundedRectangle(cornerRadius: 20))
                
         }
-        .buttonStyle(.bordered)
+//        .buttonStyle(.bordered)
         
       
         .sheet(isPresented: $showingAlarmSheet) {

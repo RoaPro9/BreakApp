@@ -30,37 +30,40 @@ struct ToolBarView: View {
                                        .frame(width: 250, height: 60)
                                        .opacity(0.35)
                                 
-                            HStack{
+                            HStack (spacing: 20){
                                 VStack{
                                     alarmSheet( notificationManager: notificationManager)
                                     Text("Alarm") .font(.system(size: 12 , weight: .semibold, design: .rounded))
                                         .foregroundColor(.accentColor)
+                                        .offset(y: -10)
                                 }
                                 
                                 VStack{
-                                   
-                                    Toggle(isOn: $showingNotivicationSheet) {
-                                        
-                                        
-                                        Label("Meditaion Time", systemImage: "brain")
-                                        
-                                        
-                                    }
-                                        .tint(.white)
-                                        .controlSize(.large)
-                                        .toggleStyle(.button)
-                                        .sheet(isPresented: $showingNotivicationSheet ){
-                                            NotificationListView()
-                                            
-                                        }
+//
+//                                    Toggle(isOn: $showingNotivicationSheet) {
+//
+//
+//                                        Label("Meditaion Time", systemImage: "figure.mind.and.body")
+//
+//
+//                                    }
+//                                        .tint(.white)
+//                                        .controlSize(.large)
+//                                        .toggleStyle(.button)
+//                                        .sheet(isPresented: $showingNotivicationSheet ){
+//                                            NotificationListView()
+//
+//                                        }
+                                    notificationListSheetView()
                                     Text("Meditaion") .font(.system(size: 12 , weight: .semibold, design: .rounded))
                                         .foregroundColor(.accentColor)
-                                        .offset(y: -16)
+                                        .offset(y: -10)
                                 }
                                 VStack (alignment: .center){
                                     SoundsSheet()
-                                    Text("Sound") .font(.system(size: 12 , weight: .semibold, design: .rounded))
+                                    Text("Sounds") .font(.system(size: 12 , weight: .semibold, design: .rounded))
                                         .foregroundColor(.accentColor)
+                                        .offset(y: -10)
                                        
                                     
                                 }

@@ -33,7 +33,8 @@ struct SoundsSheet: View {
             
             
             
-        } .buttonStyle(.bordered)
+    }
+//                .buttonStyle(.bordered)
             .sheet(isPresented: $showingSoundsSheet) {
                 NavigationView{
                     VStack {

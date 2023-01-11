@@ -18,13 +18,13 @@ struct ContentView: View {
        
  
             
-            ZStack{
+            ZStack {
                 NotificationListView()
                 
                 
                 ToolBarView()
                 
-                VStack{
+                VStack {
                   
                         
 //                    HStack(spacing: 20 ){
@@ -52,17 +52,19 @@ struct ContentView: View {
                     
                     
                     
-                    ZStack{
-                        Rectangle()
-                            .foregroundColor(.white )
-                            .cornerRadius(25)
-                            .opacity(0.4)
-                            .shadow(radius: 5)
-                            .frame(width: 350, height: 200 )
-                        
-                        Image("animal")
+                  //  ZStack{
+//                        Rectangle()
+//                            .foregroundColor(.white )
+//                            .cornerRadius(25)
+//                            .opacity(0.4)
+//                            .shadow(radius: 5)
+//                            .frame(width: 350, height: 200 )
+                    Spacer()
+                           .frame(height: 150)
+                    Image("meditiationAnimal")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .frame(width: 250, height: 250)
                             .offset(y: yPos)
                             .animation(.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5) )
                             
@@ -74,7 +76,14 @@ struct ContentView: View {
                         
                         
                         //
-                    }
+                  //  }
+                    Image("Animalshadow")
+                        .resizable()
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 10)
+                    Spacer()
+                           .frame(height: 50)
                     TimerView()
                     
                     
