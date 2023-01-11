@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3893A431296DEB4A003A540C /* InfoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3893A430296DEB4A003A540C /* InfoOverlayView.swift */; };
+		3893A433296DED72003A540C /* alarmSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3893A432296DED72003A540C /* alarmSheetView.swift */; };
 		38B998D8296AF2020043E786 /* NanoChBreakAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B998D7296AF2020043E786 /* NanoChBreakAppApp.swift */; };
 		38B998DC296AF2030043E786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B998DB296AF2030043E786 /* Assets.xcassets */; };
 		38B998DF296AF2030043E786 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B998DE296AF2030043E786 /* Preview Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3893A430296DEB4A003A540C /* InfoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOverlayView.swift; sourceTree = "<group>"; };
+		3893A432296DED72003A540C /* alarmSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmSheetView.swift; sourceTree = "<group>"; };
 		38B998D4296AF2020043E786 /* NanoChBreakApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChBreakApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B998D7296AF2020043E786 /* NanoChBreakAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChBreakAppApp.swift; sourceTree = "<group>"; };
 		38B998D9296AF2020043E786 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,10 +107,12 @@
 				38B998D9296AF2020043E786 /* ContentView.swift */,
 				38B9990B296CB0D70043E786 /* NotificationManger.swift */,
 				38B9990D296CB18C0043E786 /* NotificationListView.swift */,
+				3893A430296DEB4A003A540C /* InfoOverlayView.swift */,
 				38B99903296C939A0043E786 /* ToolBarView.swift */,
 				38B998FF296C50720043E786 /* SoundsSheet.swift */,
 				38B99920296D9EA30043E786 /* tesst.swift */,
 				38B99901296C52750043E786 /* alarmSheet.swift */,
+				3893A432296DED72003A540C /* alarmSheetView.swift */,
 				38B99907296C9BE00043E786 /* TimerViewModel.swift */,
 				38B99909296C9BF40043E786 /* TimerView.swift */,
 				38B9991E296D913E0043E786 /* soundspppppp.swift */,
@@ -232,6 +238,8 @@
 				38B99923296DABF50043E786 /* ViewModel.swift in Sources */,
 				38B9991F296D913E0043E786 /* soundspppppp.swift in Sources */,
 				38B99919296D87970043E786 /* SoundsModel.swift in Sources */,
+				3893A431296DEB4A003A540C /* InfoOverlayView.swift in Sources */,
+				3893A433296DED72003A540C /* alarmSheetView.swift in Sources */,
 				38B9991D296D8AB20043E786 /* SoundsPlayer.swift in Sources */,
 				38B99904296C939A0043E786 /* ToolBarView.swift in Sources */,
 				38B998EF296B49840043E786 /* ContentView.swift in Sources */,

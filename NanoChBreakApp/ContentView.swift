@@ -10,6 +10,7 @@ struct ContentView: View {
     @StateObject private var vm = TimerView.ViewModel()
     @State private var yPos: CGFloat = 0
     @State private var isAnimating: Bool = false
+    @State private var showingNotivicationSheet = false
     //    @State private var showingAlarmSheet = false
     //    @State private var showingSoundsSheet = false
     
@@ -33,17 +34,21 @@ struct ContentView: View {
 //                        SoundsSheet()
 //
 //                    }
-                    Toggle(isOn: $isAnimating) {
+                    Toggle(isOn: $showingNotivicationSheet) {
                         
                         
                         Label("Meditaion Time", systemImage: "brain")
                         
                         
-                    }
-                    .padding()
-                    .tint(.purple)
-                    .controlSize(.large)
-                    .toggleStyle(.button)
+                    }.padding()
+                        .tint(.purple)
+                        .controlSize(.large)
+                        .toggleStyle(.button)
+                        .sheet(isPresented: $showingNotivicationSheet ){
+                            NotificationListView()
+                            
+                        }
+                    
                     
                     
                     

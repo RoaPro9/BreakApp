@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ToolBarView: View {
+    @State private var isCreatePresented = false
+    @StateObject private var notificationManager = NotificationManger()
     var body: some View {
         NavigationView{
             ZStack{
@@ -19,7 +21,8 @@ struct ToolBarView: View {
                 .edgesIgnoringSafeArea(.all)
                 Text("").toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        alarmSheet()
+                        alarmSheet( notificationManager: notificationManager
+                                  )
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         SoundsSheet()

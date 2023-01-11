@@ -53,6 +53,26 @@ final class NotificationManger : ObservableObject {
             
             
         }
+    func createLocalNotification(title: String, hour: Int, minute: Int, completion: @escaping (Error?) -> Void) {
+            var dateComponents = DateComponents()
+            dateComponents.hour = hour
+            dateComponents.minute = minute
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            
+            let notificationContent = UNMutableNotificationContent()
+            notificationContent.title = title
+            notificationContent.sound = .default
+            notificationContent.body = "some message"
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: completion)
+        }
+        
+        func deleteLocalNotifications(identifiers: [String]) {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+        }
         
     }
     
