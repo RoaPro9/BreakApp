@@ -27,28 +27,46 @@ struct ToolBarView: View {
                         ZStack{
                             RoundedRectangle(cornerSize: CGSize(width: 250, height: 150) )
                                        .foregroundColor(Color.white )
+                                       .frame(width: 250, height: 60)
                                        .opacity(0.35)
                                 
                             HStack{
-                                alarmSheet( notificationManager: notificationManager)
-                                Toggle(isOn: $showingNotivicationSheet) {
+                                VStack{
+                                    alarmSheet( notificationManager: notificationManager)
+                                    Text("Alarm") .font(.system(size: 12 , weight: .semibold, design: .rounded))
+                                        .foregroundColor(.accentColor)
+                                }
                                 
-                                
-                                                            Label("Meditaion Time", systemImage: "brain")
-                                
-                                
-                                                        }.padding()
-                                                            .tint(.white)
-                                                            .controlSize(.large)
-                                                            .toggleStyle(.button)
-                                                            .sheet(isPresented: $showingNotivicationSheet ){
-                                                                NotificationListView()
-                                
-                                                            }
-                                SoundsSheet()
+                                VStack{
+                                   
+                                    Toggle(isOn: $showingNotivicationSheet) {
+                                        
+                                        
+                                        Label("Meditaion Time", systemImage: "brain")
+                                        
+                                        
+                                    }
+                                        .tint(.white)
+                                        .controlSize(.large)
+                                        .toggleStyle(.button)
+                                        .sheet(isPresented: $showingNotivicationSheet ){
+                                            NotificationListView()
+                                            
+                                        }
+                                    Text("Meditaion") .font(.system(size: 12 , weight: .semibold, design: .rounded))
+                                        .foregroundColor(.accentColor)
+                                        .offset(y: -16)
+                                }
+                                VStack (alignment: .center){
+                                    SoundsSheet()
+                                    Text("Sound") .font(.system(size: 12 , weight: .semibold, design: .rounded))
+                                        .foregroundColor(.accentColor)
+                                       
+                                    
+                                }
                             }
                             
-                        }
+                        }.offset(x: -50 , y: 30)
                         
                     }
 //                    ToolbarItem(placement: .navigationBarLeading) {
