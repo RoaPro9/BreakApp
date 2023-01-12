@@ -9,12 +9,13 @@ import SwiftUI
 
 
 struct SoundsSheet: View {
+    var sound1: LocalizedStringKey = "sound1"
     @EnvironmentObject var viewModel : SoundViewModel
     @State private var showingSoundsSheet = false
     @State  var SUrl : String = "sound5"
     //@State var sounds : [Sounds] = []
     var sounds = [
-        Sounds(title: "Sound1", url: "sound1", time: "1:00"),
+        Sounds(title: "sound1", url: "sound1", time: "1:00"),
         Sounds(title: "Sound2", url: "sound2", time: "3:00"),
         Sounds(title: "Sound3", url: "sound3", time: "12:00"),
         Sounds(title: "Sound4", url: "sound4", time: "1:00"),

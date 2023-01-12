@@ -184,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38B998CF296AF2020043E786 /* Build configuration list for PBXProject "NanoChBreakApp" */;
+			buildConfigurationList = 38B998CF296AF2020043E786 /* Build configuration list for PBXProject "BreakApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -442,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38B998CF296AF2020043E786 /* Build configuration list for PBXProject "NanoChBreakApp" */ = {
+		38B998CF296AF2020043E786 /* Build configuration list for PBXProject "BreakApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38B998E0296AF2030043E786 /* Debug */,

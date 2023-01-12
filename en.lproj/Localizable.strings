@@ -31,9 +31,9 @@
 "Alarm" = "Alarm" ;
 "Sounds"="Sounds";
 "Done"="Done";
-"sound1"= "sound1";
-"sound2"= "sound2";
-"sound3"= "sound3";
-"sound4"= "sound4";
-"sound5"= "sound5";
+"sound1" = "Sound 1";
+"sound2" = "Sound 2";
+"sound3" = "Sound 3";
+"sound4" = "Sound 4";
+"sound5" = "Sound 5";
 

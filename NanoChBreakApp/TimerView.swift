@@ -48,18 +48,22 @@ struct TimerView: View {
 //                    self.vmS.player.play()
 //                    self.vmS.playing = true
                     
-                }.buttonStyle(.bordered)
-                .tint(Color("Color 9"))
-                .foregroundColor(.white)
+                }.foregroundColor(.white)
+                
+                    .tint(.white)
+                .buttonStyle(.bordered)
+                
                 Button("Reset"){
                     vm.reset()
                     
                     self.viewModel.audioPlayer?.stop()
 //
                     
-                } .foregroundColor(Color("Color 9"))
-                .buttonStyle(.bordered)
+                }
                 .tint(.white)
+                .foregroundColor(Color("Color 9"))
+                .buttonStyle(.bordered)
+                
                
                
 //                Button("Reset" , action : vm.reset)
