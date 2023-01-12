@@ -65,16 +65,18 @@ struct SoundsSheet: View {
                                     //
                                     
                                 }
-                                .tint(Color("Color 9"))
+                                .tint(.white)
                                 
                                 
                                 
                             }}
                             .cornerRadius(25)
-                            .foregroundStyle(Color("Color 1"))
+                            .foregroundStyle(.white)
                             .toolbar {
                                 ToolbarItem(placement: .confirmationAction) {
-                                    Button("Done", action: {})
+                                    Button("Done", action: {
+                                        showingSoundsSheet = false
+                                    })   .foregroundStyle(.white)
                                 }
                                 
                                 //                            ToolbarItem(placement: .cancellationAction) {

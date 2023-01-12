@@ -27,7 +27,7 @@ struct LaunchScreen: View {
                 .edgesIgnoringSafeArea(.all)
                 
                 VStack{
-                    Image("breakLogo")
+                    Image("meditiationAnimal")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100)

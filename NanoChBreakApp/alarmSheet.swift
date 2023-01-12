@@ -30,7 +30,7 @@ struct alarmSheet: View {
         
       
         .sheet(isPresented: $showingAlarmSheet) {
-            alarmSheetView( notificationManager: notificationManager
+            alarmSheetView( notificationManager: notificationManager 
             )
         }
     }
