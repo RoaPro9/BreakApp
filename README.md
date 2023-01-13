@@ -13,6 +13,7 @@ Take Break provides a unique and engaging way for adults and people with ADHD wh
 * A customizable meditation timer.
 * Option to set reminders for daily meditation sessions.
 * Accessibility for people with color blindness.
+* localizable 
 
 ## Getting Started
 
@@ -20,6 +21,7 @@ Take Break provides a unique and engaging way for adults and people with ADHD wh
 * Browse through the available meditation sounds and select one that interests you.
 * Use the built-in timer or set your own custom duration.
 * Set reminders to make meditation a consistent part of your daily routine.
+* Localization support for Arabic and English languages
 ## Take Berak Ui
 
 ![onBBreak](https://user-images.githubusercontent.com/70070721/212376702-b15934f7-f445-4dd3-aee8-3b34cb93cb37.png)
