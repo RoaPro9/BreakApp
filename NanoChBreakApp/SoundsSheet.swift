@@ -29,6 +29,8 @@ struct SoundsSheet: View {
             
         } label: {
             Image(systemName: "music.note")
+                .font(.system(size: 30))
+
                 .foregroundColor(Color.white)
             
             
@@ -80,9 +82,9 @@ struct SoundsSheet: View {
                                     })   .foregroundStyle(.white)
                                 }
                                 
-                                //                            ToolbarItem(placement: .cancellationAction) {
-                                //                                Button("Cancel", action: {})
-                                //                            }
+//                                                            ToolbarItem(placement: .cancellationAction) {
+//                                                                Button("Cancel", action: {showingSoundsSheet = false})
+//                                                            }
                             }
                             
                             

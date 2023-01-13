@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct NanoChBreakAppApp: App {
+struct BreakAppApp: App {
     @StateObject var vm = SoundViewModel()
     var body: some Scene {
         WindowGroup {

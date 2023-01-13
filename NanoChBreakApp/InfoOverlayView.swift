@@ -8,6 +8,8 @@ struct InfoOverlayView: View {
     let buttonTitle: String
     let systemImageName: String
     let action: () -> Void
+  
+
     @StateObject private var notificationManager = NotificationManger()
     var body: some View {
         VStack {
@@ -20,8 +22,13 @@ struct InfoOverlayView: View {
                           )
                 action()
             } label: {
-                Label(buttonTitle, systemImage: systemImageName)
+                Label(buttonTitle, systemImage: systemImageName).foregroundColor(.white)
+                
             }
+//            }.sheet(isPresented: ) {
+//                alarmSheetView( notificationManager: notificationManager
+//                )
+//            }
             .padding()
             .background(Color(.systemGray5))
             .cornerRadius(5)

@@ -64,7 +64,7 @@ struct NotificationListView: View {
         }
         .listStyle(InsetGroupedListStyle())
         .overlay(infoOverlayView)
-       
+        
         .onAppear(perform: notificationManager.reloadAuthorizationStatus)
         .onChange(of: notificationManager.authorizationStatus) { authorizationStatus in
             switch authorizationStatus {
@@ -75,14 +75,20 @@ struct NotificationListView: View {
             default:
                 break
             }
-        }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+        } .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             notificationManager.reloadAuthorizationStatus()
         }
+     
+        .sheet(isPresented: $isCreatePresented) {
         
-            .accentColor(.primary)
-        }
-    }
+                alarmSheetView( notificationManager: notificationManager
+                )
+            }
+            
+            
+            .accentColor(.white)
+        }}
+    
 
 
 extension NotificationListView {

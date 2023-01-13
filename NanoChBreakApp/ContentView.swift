@@ -27,38 +27,10 @@ struct ContentView: View {
                 VStack {
                   
                         
-//                    HStack(spacing: 20 ){
-//
-//
-//                        alarmSheet()
-//                        SoundsSheet()
-//
-//                    }
-//                    Toggle(isOn: $showingNotivicationSheet) {
-//                        
-//                        
-//                        Label("Meditaion Time", systemImage: "brain")
-//                        
-//                        
-//                    }.padding()
-//                        .tint(.purple)
-//                        .controlSize(.large)
-//                        .toggleStyle(.button)
-//                        .sheet(isPresented: $showingNotivicationSheet ){
-//                            NotificationListView()
-//                            
-//                        }
+
                     
                     
                     
-                    
-                  //  ZStack{
-//                        Rectangle()
-//                            .foregroundColor(.white )
-//                            .cornerRadius(25)
-//                            .opacity(0.4)
-//                            .shadow(radius: 5)
-//                            .frame(width: 350, height: 200 )
                     Spacer()
                            .frame(height: 150)
                     Image("meditiationAnimal")
@@ -67,8 +39,7 @@ struct ContentView: View {
                             .frame(width: 250, height: 250)
                             .offset(y: yPos)
                             .animation(.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5) )
-                            
-//                            .animation(Animation.spring(response: 10, dampingFraction: 1, blendDuration: 1).repeatForever(autoreverses: true).speed(5) , value:  vm.isActive)
+
                             .onAppear {
                                 
                                 self.yPos = -30

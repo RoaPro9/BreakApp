@@ -47,6 +47,14 @@ struct alarmSheetView: View {
                     }
                    
                     .toolbar {
+                        ToolbarItem(placement: .cancellationAction){ Button("Cancel", action: {
+                            dismiss()
+                            showingAlarmSheet = false
+                            
+                        }).foregroundStyle(.gray)
+                            
+                        }
+
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Create", action: {
                                
@@ -71,7 +79,6 @@ struct alarmSheetView: View {
 //                                                       .frame(maxWidth: .infinity)
 //                                                       .contentShape(Rectangle())
 //                                               }
-                            
                             
                             
                             

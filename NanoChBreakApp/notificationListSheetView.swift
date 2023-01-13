@@ -16,6 +16,8 @@ struct notificationListSheetView: View {
             
         } label: {
             Image(systemName: "figure.mind.and.body")
+                .font(.system(size: 30))
+
                 .foregroundColor(Color.white)
             
             

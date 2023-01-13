@@ -27,7 +27,7 @@ struct ToolBarView: View {
                         ZStack{
                             RoundedRectangle(cornerSize: CGSize(width: 250, height: 150) )
                                        .foregroundColor(Color.white )
-                                       .frame(width: 250, height: 60)
+                                       .frame(width: 260, height: 70)
                                        .opacity(0.35)
                                 
                             HStack (spacing: 20){
@@ -69,7 +69,7 @@ struct ToolBarView: View {
                                 }
                             }
                             
-                        }.offset(x: -50 , y: 30)
+                        }.offset(x: -60, y: 30)
                         
                     }
 //                    ToolbarItem(placement: .navigationBarLeading) {

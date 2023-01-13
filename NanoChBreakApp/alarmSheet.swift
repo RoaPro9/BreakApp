@@ -20,6 +20,7 @@ struct alarmSheet: View {
             showingAlarmSheet.toggle()
         } label: {
             Image(systemName: "alarm")
+                .font(.system(size: 30))
                 .foregroundColor(Color.white)
             
 //            .background(.thinMaterial)
