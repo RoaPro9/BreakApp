@@ -16,9 +16,9 @@ We may update this Privacy Policy from time to time in order to reflect, for exa
 
 ###
 Take Break is A Team Work at  Apple Developer Academy at TUWAIQ
-Team member:
- Roa AbuShairah
-Ibtisam Alhowaimel
+#### Team member:
+ * Roa AbuShairah
+* Ibtisam Alhowaimel
  
  you have any questions about our Privacy Policy, please contact us at Roamoha26@gmail.com
 
