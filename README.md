@@ -13,7 +13,7 @@ Take Break provides a unique and engaging way for adults and people with ADHD wh
 * A customizable meditation timer.
 * Option to set reminders for daily meditation sessions.
 * Accessibility for people with color blindness.
-* localizable 
+* localizable.
 
 ## Getting Started
 
